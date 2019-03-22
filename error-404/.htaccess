@@ -1,0 +1,15 @@
+RewriteEngine On
+
+# The URL-path in the argument of the ErrorDocument directive is always relative to the DocumentRoot
+
+# absolute path
+#ErrorDocument 404 ./404.html
+
+# relative path
+# if requested resource isn't a file
+# and isn't a directory
+# then serve local error script
+# [L] means stop reading .htaccess file (exit)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule .* 404.html [L]
