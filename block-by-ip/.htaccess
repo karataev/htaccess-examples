@@ -1,0 +1,6 @@
+RewriteEngine On
+
+# Block users by IP
+Order Allow,Deny
+Allow from ALL
+Deny from 37.194.33.150

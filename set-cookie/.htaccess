@@ -1,0 +1,3 @@
+RewriteEngine On
+
+Header set Set-Cookie "foo=bar; path=/;"
